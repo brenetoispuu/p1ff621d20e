@@ -1,0 +1,81 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=refresh content=60><title>Lab · paper variants</title>
+<link rel=preconnect href=https://fonts.googleapis.com><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel=stylesheet><style>
+:root{--bg:#07090f;--p:#0f1320;--b:#1c2236;--t:#e7ecf5;--m:#7d8799;--g:#16c784;--r:#ea3943;--a:#8b5cf6}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:radial-gradient(1200px 600px at 10% -10%,#1b1440 0,transparent 60%),var(--bg);color:var(--t);min-height:100vh}
+.wrap{max-width:1100px;margin:auto;padding:20px 16px 40px}header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+h1{font-size:20px;margin:0;letter-spacing:-.02em}h1 b{background:linear-gradient(90deg,#8b5cf6,#16c784);-webkit-background-clip:text;color:transparent}
+.tag{font-size:11px;padding:4px 10px;border-radius:99px;border:1px solid var(--b);color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:22px}
+.card{background:linear-gradient(180deg,#121729,#0d1120);border:1px solid var(--b);border-radius:14px;padding:14px 16px}.l{font-size:12px;color:var(--m);text-transform:uppercase;letter-spacing:.06em}
+.v{font-size:24px;font-weight:700;margin-top:6px}.s{font-size:12px;color:var(--m);margin-top:2px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}.on{background:var(--g);box-shadow:0 0 10px var(--g)}.off{background:var(--r)}
+section{background:var(--p);border:1px solid var(--b);border-radius:14px;padding:14px 16px;margin-bottom:16px}h2{font-size:14px;margin:0 0 10px;color:#c9d1e0}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;color:var(--m);font-weight:500;font-size:11px;text-transform:uppercase;padding:8px;border-bottom:1px solid var(--b)}
+td{padding:9px 8px;border-bottom:1px solid #151a2b;white-space:nowrap}tr:hover td{background:#121729}a{color:#a78bfa;text-decoration:none}a:hover{text-decoration:underline}
+.ad{font-family:ui-monospace,monospace;font-size:11px;color:var(--m)}.w{font-weight:500}.g{color:var(--g)}.r{color:var(--r)}.n,.m{color:var(--m)}
+.pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}.buy{background:#16c78422;color:var(--g)}.sell{background:#ea394322;color:var(--r)}
+.empty{text-align:center;color:var(--m);padding:26px 0;font-size:13px}.ei{font-size:28px;opacity:.5}footer{color:var(--m);font-size:12px;text-align:center;margin-top:20px}
+@media(max-width:600px){.v{font-size:20px}td,th{padding:7px 6px}}</style></head><body><div class=wrap><header><h1><b>fomo-bot</b> Lab</h1><div style="display:flex;gap:8px;align-items:center"><a class=chip href="./">← Main dashboard</a><span class=tag>PAPER ONLY · updated 14.10 19:47 Tallinn</span></div></header>
+<style>
+.lab{margin-top:34px}.lab-h{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.lab-h h1{font-size:26px;letter-spacing:-.03em}.lab-h .sub{color:var(--m);font-size:13px;margin-top:4px}
+.chip{font-size:11px;padding:5px 11px;border-radius:99px;background:#8b5cf61f;border:1px solid #8b5cf655;color:#c4b5fd;font-weight:500}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:16px}
+.vcard{position:relative;overflow:hidden;background:linear-gradient(160deg,#151a2e 0%,#0d1120 70%);border:1px solid var(--b);border-radius:18px;padding:18px 18px 14px;box-shadow:0 10px 30px #0006}
+.vcard:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,#8b5cf6,#16c784)}
+.vtag{font-size:11px;font-weight:700;color:#a78bfa;letter-spacing:.08em}.vname{font-size:17px;font-weight:700;margin:2px 0 4px}.vdesc{font-size:12px;color:var(--m);min-height:32px}
+.vrow{display:flex;justify-content:space-between;align-items:flex-end;margin-top:12px}.veq{font-size:28px;font-weight:700;letter-spacing:-.02em}.vpct{font-size:14px;font-weight:700;padding:3px 9px;border-radius:8px}
+.vpct.g{background:#16c78420}.vpct.r{background:#ea394320}.vpct.n{background:#7d879920}
+.vstats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;font-size:12px}.vstats div span{display:block;color:var(--m);font-size:10px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+.prog{margin-top:12px;font-size:11px;color:var(--m)}.bar{height:6px;background:#1c2236;border-radius:9px;overflow:hidden;margin-top:5px}.bar i{display:block;height:100%;background:linear-gradient(90deg,#8b5cf6,#16c784);border-radius:9px}
+.spark{height:46px;margin-top:10px}.chartbox{height:280px}
+th.sort{cursor:pointer;user-select:none}th.sort:after{content:" ↕";opacity:.35}th.asc:after{content:" ↑";opacity:1}th.desc:after{content:" ↓";opacity:1}
+@media(min-width:1300px){.wrap{max-width:1360px}}
+</style><div class=lab id=lab><div class=lab-h><div><h1><b>Lab</b> · paper variants</h1><div class=sub>Each variant runs its own $1,000 paper account · fills market ×1.01 buy / ×0.99 sell · no verdict before 15 trades</div></div>
+<div style="display:flex;gap:8px;align-items:center"><span class=chip>Combined $7,000.00 / $7,000</span><span class=tag>Updated 14.10 19:47 Tallinn</span></div></div>
+<div class=vgrid><div class=vcard><div class=vtag>V1</div><div class=vname>Meme filtered</div><div class=vdesc>60s queue · skip if &gt; wallet price +15% · max 3 buys/wallet/day</div>
+<div class=vrow><div class=veq>$1,000.00</div><div class="vpct n">0.00%</div></div>
+<div class=vstats><div><span>Realized</span><span class="n">0.00</span></div><div><span>Open</span><span class="n">0.00</span></div><div><span>Positions</span>0</div><div><span>Win rate</span>–</div></div>
+<canvas class=spark id="sp_lab_meme_filtered"></canvas>
+<div class=prog>0 / 15 trades before any verdict<div class=bar><i style="width:0%"></i></div></div></div><div class=vcard><div class=vtag>V2</div><div class=vname>Meme quality</div><div class=vdesc>Quality wallets only (bigbabba + gate: ≥15 trips, WR≥50%, exp&gt;0)</div>
+<div class=vrow><div class=veq>$1,000.00</div><div class="vpct n">0.00%</div></div>
+<div class=vstats><div><span>Realized</span><span class="n">0.00</span></div><div><span>Open</span><span class="n">0.00</span></div><div><span>Positions</span>0</div><div><span>Win rate</span>–</div></div>
+<canvas class=spark id="sp_lab_meme_quality"></canvas>
+<div class=prog>0 / 15 trades before any verdict<div class=bar><i style="width:0%"></i></div></div></div><div class=vcard><div class=vtag>V3</div><div class=vname>Majors ladder F</div><div class=vdesc>EMA50/200 cross · 33% @+1 ATR · 33% @+2 ATR · rest ATR×3 trail/cross</div>
+<div class=vrow><div class=veq>$1,000.00</div><div class="vpct n">0.00%</div></div>
+<div class=vstats><div><span>Realized</span><span class="n">0.00</span></div><div><span>Open</span><span class="n">0.00</span></div><div><span>Positions</span>0</div><div><span>Win rate</span>–</div></div>
+<canvas class=spark id="sp_lab_majors_ladderF"></canvas>
+<div class=prog>0 / 15 trades before any verdict<div class=bar><i style="width:0%"></i></div></div></div><div class=vcard><div class=vtag>V4</div><div class=vname>Meme fast queue</div><div class=vdesc>As V1 but 15s queue instead of 60s</div>
+<div class=vrow><div class=veq>$1,000.00</div><div class="vpct n">0.00%</div></div>
+<div class=vstats><div><span>Realized</span><span class="n">0.00</span></div><div><span>Open</span><span class="n">0.00</span></div><div><span>Positions</span>0</div><div><span>Win rate</span>–</div></div>
+<canvas class=spark id="sp_lab_meme_fastq15"></canvas>
+<div class=prog>0 / 15 trades before any verdict<div class=bar><i style="width:0%"></i></div></div></div><div class=vcard><div class=vtag>V5</div><div class=vname>Meme own exit</div><div class=vdesc>Entry as V1 · ignores wallet sells · 50% at +30% · stop −20% · time stop 2h</div>
+<div class=vrow><div class=veq>$1,000.00</div><div class="vpct n">0.00%</div></div>
+<div class=vstats><div><span>Realized</span><span class="n">0.00</span></div><div><span>Open</span><span class="n">0.00</span></div><div><span>Positions</span>0</div><div><span>Win rate</span>–</div></div>
+<canvas class=spark id="sp_lab_meme_ownexit"></canvas>
+<div class=prog>0 / 15 trades before any verdict<div class=bar><i style="width:0%"></i></div></div></div><div class=vcard><div class=vtag>V6</div><div class=vname>Majors daily ATR trail</div><div class=vdesc>EMA50/200 cross · exit only on ATR(14 daily)×3 trailing stop</div>
+<div class=vrow><div class=veq>$1,000.00</div><div class="vpct n">0.00%</div></div>
+<div class=vstats><div><span>Realized</span><span class="n">0.00</span></div><div><span>Open</span><span class="n">0.00</span></div><div><span>Positions</span>0</div><div><span>Win rate</span>–</div></div>
+<canvas class=spark id="sp_lab_majors_atr14d"></canvas>
+<div class=prog>0 / 15 trades before any verdict<div class=bar><i style="width:0%"></i></div></div></div><div class=vcard><div class=vtag>V7</div><div class=vname>Stocks news-gap</div><div class=vdesc>Top-50 S&amp;P (2021) · gap ≥ max(1%, 0.5 ATR) · vol ≥1× · close&gt;open · stop 2 ATR · 10d hold · 1% risk / 5% cap · no trades 2d pre-earnings</div>
+<div class=vrow><div class=veq>$1,000.00</div><div class="vpct n">0.00%</div></div>
+<div class=vstats><div><span>Realized</span><span class="n">0.00</span></div><div><span>Open</span><span class="n">0.00</span></div><div><span>Positions</span>0</div><div><span>Win rate</span>–</div></div>
+<canvas class=spark id="sp_lab_stocks_gap"></canvas>
+<div class=prog>0 / 15 trades before any verdict<div class=bar><i style="width:0%"></i></div></div></div><div class=vcard style='opacity:.55'><div class=vtag>V8</div><div class=vname>Box Theory</div><div class=vdesc>Not started: rules not received yet</div><div class=vrow><div class=veq>$1,000.00</div><div class='vpct n'>not running</div></div></div></div>
+<section><h2>Equity by variant</h2><div class=chartbox><canvas id=labchart></canvas></div></section>
+<section><h2>Open positions</h2><div class=empty><div class=ei>◌</div>No open lab positions.</div></section>
+<section><h2>Trades</h2><div class=empty><div class=ei>◌</div>No lab trades yet.</div></section>
+<section><h2>Meme buy decisions · wallet tx → detected → our buy (Tallinn)</h2><div class=empty><div class=ei>◌</div>No lab buy decisions yet.</div></section></div>
+<script>window.LABDATA={"lab_meme_filtered": {"label": "V1 Meme filtered", "pts": [[1791992854655, 1000.0], [1791996454655, 1000.0]], "up": true}, "lab_meme_quality": {"label": "V2 Meme quality", "pts": [[1791992854655, 1000.0], [1791996454655, 1000.0]], "up": true}, "lab_majors_ladderF": {"label": "V3 Majors ladder F", "pts": [[1791992854655, 1000.0], [1791996454655, 1000.0]], "up": true}, "lab_meme_fastq15": {"label": "V4 Meme fast queue", "pts": [[1791992854655, 1000.0], [1791996454655, 1000.0]], "up": true}, "lab_meme_ownexit": {"label": "V5 Meme own exit", "pts": [[1791992854655, 1000.0], [1791996454655, 1000.0]], "up": true}, "lab_majors_atr14d": {"label": "V6 Majors daily ATR trail", "pts": [[1791992854655, 1000.0], [1791996454655, 1000.0]], "up": true}, "lab_stocks_gap": {"label": "V7 Stocks news-gap", "pts": [[1791992854655, 1000.0], [1791996454655, 1000.0]], "up": true}};</script><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script><script>
+(function(){var D=window.LABDATA||{},C=['#8b5cf6','#16c784','#38bdf8','#f59e0b','#ec4899','#ef4444','#a3e635'];
+if(window.Chart){Chart.defaults.color='#7d8799';Chart.defaults.font.family='Inter,system-ui,sans-serif';
+var ds=[];Object.keys(D).forEach(function(v,i){var s=D[v];ds.push({label:s.label,data:s.pts.map(function(p){return{x:p[0],y:p[1]}}),borderColor:C[i%7],backgroundColor:C[i%7]+'22',borderWidth:2,pointRadius:0,tension:.25,stepped:false});
+var el=document.getElementById('sp_'+v);if(el)new Chart(el,{type:'line',data:{datasets:[{data:s.pts.map(function(p){return{x:p[0],y:p[1]}}),borderColor:s.up?'#16c784':'#ea3943',backgroundColor:(s.up?'#16c784':'#ea3943')+'22',fill:true,borderWidth:1.6,pointRadius:0,tension:.3}]},options:{animation:false,responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{type:'linear',display:false},y:{display:false}}}});});
+var el=document.getElementById('labchart');if(el)new Chart(el,{type:'line',data:{datasets:ds},options:{animation:false,responsive:true,maintainAspectRatio:false,interaction:{mode:'nearest',intersect:false},
+plugins:{legend:{labels:{boxWidth:10,usePointStyle:true}},tooltip:{callbacks:{title:function(t){return new Date(t[0].parsed.x).toLocaleString('et-EE',{timeZone:'Europe/Tallinn'})},label:function(t){return t.dataset.label+': $'+t.parsed.y.toFixed(2)}}}},
+scales:{x:{type:'linear',grid:{color:'#151a2b'},ticks:{callback:function(v){return new Date(v).toLocaleString('et-EE',{timeZone:'Europe/Tallinn',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})},maxTicksLimit:8}},y:{grid:{color:'#151a2b'},ticks:{callback:function(v){return '$'+v}}}}}});}
+document.querySelectorAll('table').forEach(function(tb){var ths=tb.querySelectorAll('th');ths.forEach(function(th,ci){th.classList.add('sort');th.addEventListener('click',function(){var asc=!th.classList.contains('asc');ths.forEach(function(x){x.classList.remove('asc','desc')});th.classList.add(asc?'asc':'desc');
+var body=tb.tBodies[0],rows=[].slice.call(body.rows);function val(r){var t=(r.cells[ci]||{}).innerText||'';var n=parseFloat(t.replace(/[$,%+~\s]/g,'').replace('–',''));return isNaN(n)?t.toLowerCase():n}
+rows.sort(function(a,b){var x=val(a),y=val(b);return (x>y?1:x<y?-1:0)*(asc?1:-1)});rows.forEach(function(r){body.appendChild(r)})})})});})();
+</script><footer>Lab paper variants · auto-refresh 60s · prices DexScreener / Binance / Yahoo</footer></div></body></html>
